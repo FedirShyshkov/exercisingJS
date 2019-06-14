@@ -48,6 +48,8 @@ function anagrams(word, words) {
   return resultingArray;
 }
 
+// can be done using sort!!!
+
 console.log(anagrams("abba", ["aabb", "abcd", "bbaa", "dada"]));
 
 console.log(anagrams("racer", ["crazer", "carer", "racar", "caers", "racer"]));
