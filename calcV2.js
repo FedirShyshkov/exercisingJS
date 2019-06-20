@@ -13,6 +13,9 @@ function Calculator() {
   this["+"] = function(a, b) {
     return a + b;
   };
+  this["-"] = function(a, b) {
+    return a - b;
+  };
   this.addMethod = function(sign, func) {
     this[sign] = func;
   };
