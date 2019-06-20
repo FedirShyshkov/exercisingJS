@@ -1,10 +1,14 @@
 function Calculator() {
   this.calculate = function(str) {
     var stringArray = str.split(" ");
-    return this[stringArray[1]](
-      parseFloat(stringArray[0]),
-      parseFloat(stringArray[2])
-    );
+    (a = parseFloat(stringArray[0])),
+      (op = stringArray[1]),
+      (b = parseFloat(stringArray[2]));
+
+    if (!this[op] || isNaN(a) || isNaN(b)) {
+      return NaN;
+    }
+    return this[op](parseFloat(a), parseFloat(b));
   };
   this["+"] = function(a, b) {
     return a + b;
